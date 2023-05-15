@@ -13,7 +13,7 @@ import java.util.List;
 import mx.itson.BancoGestapo.entidades.Tarjeta;
 
 /**
- *
+ * Es un DATA ACCESS OBJECT, que acede a los datos de la tabla TarjetaDAO
  * @author pyatq
  */
 public class TarjetaDAO {
@@ -46,7 +46,14 @@ public class TarjetaDAO {
         }
         return tarjetas;
     }
-        
+        /**
+         * Guarda los datos creados 
+         * @param nombre Guarda nombre
+         * @param numeroTarjeta Guarda numero de tarjeta
+         * @param interes Guarda intereses
+         * @param credito Guarda credito
+         * @return Es para indicar si el Guardado fue concretado de lo contrario retorna false
+         */
         public static boolean guardar(String nombre, String numeroTarjeta, int interes, int credito){
         boolean resultado = false;        
         try{
@@ -70,6 +77,12 @@ public class TarjetaDAO {
         }
         return resultado;
     }
+        
+        /**
+         * Obtener los datos de Tarjeta desde su ID
+         * @param id Obtener los datos 
+         * @return Retorna Tarjeta
+         */
         
          public static Tarjeta buscarId(int id){
         Tarjeta tarjeta = new Tarjeta();

@@ -6,8 +6,9 @@ package mx.itson.BancoGestapo.persistencia;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+
 /**
- *
+ * Es una Clase creada para la conexion de NetBeans a la Base de Datos MySQL
  * @author pyatq
  */
 public class Conexion {

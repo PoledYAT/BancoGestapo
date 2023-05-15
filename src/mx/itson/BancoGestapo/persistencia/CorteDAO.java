@@ -16,11 +16,15 @@ import mx.itson.BancoGestapo.entidades.Movimiento;
 import mx.itson.BancoGestapo.entidades.Tarjeta;
 
 /**
- *
+ * Es un DATA ACCESS OBJECT, que acede a los datos de la tabla CorteDAO
  * @author pyatq
  */
 public class CorteDAO {
     
+    /**
+     * Obtiene los datos creado en la Base de Datos
+     * @return 
+     */
     public static List<Corte> obtener(){
         List<Corte> corte = new ArrayList<>();
         
@@ -49,11 +53,19 @@ public class CorteDAO {
         return corte;
     }
     
-    public static boolean guardar(int idCliente, int idTarjeta, int idHistorial, double total){
+    /**
+     * Guarda los registros de la clase Corte
+     * @param idCliente Guarda los datos de Cliente desde su id
+     * @param idTarjeta Guarda los datos de Tarjeta desde su id
+     * @param total Guarda el total 
+     * @return Es para indicar si el Guardado fue concretado de lo contrario retorna false
+     */
+    
+    public static boolean guardar(int idCliente, int idTarjeta, double total){
         boolean resultado = false;        
         try{
             
-            String query ="INSERT INTO corte (idCliente, idTarjeta, idHistorial, total) VALUES (?, ?, ?, ?)";
+            String query ="INSERT INTO corte (idCliente, idTarjeta, total) VALUES (?, ?, ?, ?)";
             Connection conexion = Conexion.get();
             
             
@@ -61,8 +73,7 @@ public class CorteDAO {
             
              statement.setInt(1, idCliente);
              statement.setInt(2, idTarjeta);
-             statement.setInt(3, idHistorial);
-             statement.setDouble(4, total);
+             statement.setDouble(3, total);
             
             ResultSet rs = statement.executeQuery(query);
             resultado = true;
@@ -73,6 +84,11 @@ public class CorteDAO {
         return resultado;
     }
     
+    /**
+     * Obtener los datos de Corte por su Id
+     * @param id Obtener los datos 
+     * @return Retorna Corte 
+     */
     public static Corte buscarId(int id){
         Corte corte = new Corte();
         

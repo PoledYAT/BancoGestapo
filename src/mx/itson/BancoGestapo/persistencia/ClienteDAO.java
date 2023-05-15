@@ -15,11 +15,15 @@ import mx.itson.BancoGestapo.entidades.Cliente;
 import mx.itson.BancoGestapo.entidades.Tarjeta;
 
 /**
- *
+ * Es un DATA ACCESS OBJECT, que acede a los datos de la tabla Cliente DAO
  * @author pyatq
  */
 public class ClienteDAO {
     
+    /**
+     * Obtener los datos creados desde la Base de Datos
+     * @return 
+     */
    public static List<Cliente> obtener(){
         List<Cliente> clientes = new ArrayList<>();
         
@@ -50,6 +54,14 @@ public class ClienteDAO {
         return clientes;
     }
     
+   /**
+    * Guarda nuvos regristros creados
+    * @param nombre Guarda nombre
+    * @param apellido Guarda apellido
+    * @param telefono Guarda telefono
+    * @param numeroTarjeta Guarda Numero de tarjeta
+    * @return Es para indicar si el Guardado fue concretado de lo contrario retorna false
+    */
     public static boolean guardar(String nombre, String apellido, String telefono, int numeroTarjeta){
         boolean resultado = false;        
         try{
@@ -73,7 +85,12 @@ public class ClienteDAO {
         }
         return resultado;
     }
-    
+
+    /**
+     * Obtener los datos de Cliente por su Id
+     * @param id Obtener los datos 
+     * @return Retorna Cliente 
+     */
    public static Cliente buscarId(int id){
         Cliente clientes = new Cliente();
         

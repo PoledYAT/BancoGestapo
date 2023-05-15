@@ -16,11 +16,15 @@ import mx.itson.BancoGestapo.entidades.Movimiento;
 import mx.itson.BancoGestapo.entidades.Tarjeta;
 
 /**
- *
+ * Es un DATA ACCESS OBJECT, que acede a los datos de la tabla MovimientoDAO
  * @author pyatq
  */
 public class MovimientoDAO {
     
+    /**
+     * Obtiene los datos creados desde la Base de Datos
+     * @return 
+     */
     public static List<Movimiento> obtener(){
         List<Movimiento> movimientos = new ArrayList<>();
         
@@ -62,6 +66,12 @@ public class MovimientoDAO {
         return movimientos;
     }
     
+    
+    /**
+     * Obtener los datos de Movimiento desde su ID
+     * @param id Obtener los datos 
+     * @return Retorna Movimiento 
+     */
     public static Movimiento buscarId(int id){
         Movimiento movimientos = new Movimiento();
         

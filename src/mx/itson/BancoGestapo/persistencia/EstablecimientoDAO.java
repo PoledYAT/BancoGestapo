@@ -13,11 +13,15 @@ import java.util.List;
 import mx.itson.BancoGestapo.entidades.Establecimiento;
 
 /**
- *
+ * Es un DATA ACCESS OBJECT, que acede a los datos de la tabla EstablecimientoDAO
  * @author pyatq
  */
 public class EstablecimientoDAO {
     
+    /**
+     * Obtiene los datos creados desde la Base de Datos
+     * @return 
+     */
         public static List<Establecimiento> obtener(){
         List<Establecimiento> establecimientos = new ArrayList<>();
         
@@ -44,7 +48,13 @@ public class EstablecimientoDAO {
         }
         return establecimientos;
     }
-        
+     
+        /**
+         * Guarda nuevos registros creados
+         * @param nombre Guarda nombre
+         * @param direccion Guarda direccion
+         * @return Guarda los registros creados
+         */
         public static boolean guardar(String nombre, String direccion){
         boolean resultado = false;        
         try{
@@ -67,6 +77,15 @@ public class EstablecimientoDAO {
         return resultado;
     }
         
+        /**
+         * Editar los datos de la tabla Establecimiento
+         * @param id editar id
+         * @param nombre editar nombre
+         * @param apellido editar apellido
+         * @param telefono editar telefono
+         * @param numeroTarjeta editar numero de tarjeta
+         * @return Es para indicar si el Guardado fue concretado de lo contrario retorna false
+         */
         
           public static boolean editar(int id, String nombre, String apellido, String telefono, int numeroTarjeta){
         boolean resultado = false;        
@@ -92,7 +111,11 @@ public class EstablecimientoDAO {
         }
         return resultado;
     }
-          
+          /**
+           * Obtener los datos de Establecimiento desde su id
+           * @param id Obtener los datos 
+           * @return Retorna Establecimiento
+           */
         public static Establecimiento buscarId(int id){
         Establecimiento establecimiento = new Establecimiento();
         
