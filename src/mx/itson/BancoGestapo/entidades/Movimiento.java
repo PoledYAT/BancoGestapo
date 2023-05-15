@@ -7,7 +7,7 @@ package mx.itson.BancoGestapo.entidades;
 import java.util.Date;
 
 /**
- * 
+ * Estidades de la clase Movimiento
  * @author pyatq
  */
 public class Movimiento {

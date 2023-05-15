@@ -5,7 +5,7 @@
 package mx.itson.BancoGestapo.entidades;
 
 /**
- *
+ * Estidades de la clase Trajeta
  * @author pyatq
  */
 public class Tarjeta {

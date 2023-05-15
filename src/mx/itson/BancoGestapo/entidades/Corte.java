@@ -7,7 +7,7 @@ package mx.itson.BancoGestapo.entidades;
 import java.util.Date;
 
 /**
- * 
+ * Estidades de la clase Corte
  * @author pyatq
  */
 public class Corte {

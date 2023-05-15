@@ -5,7 +5,7 @@
 package mx.itson.BancoGestapo.entidades;
 
 /**
- * 
+ * Estidades de la clase Cliente
  * @author pyatq
  */
 public class Cliente {
