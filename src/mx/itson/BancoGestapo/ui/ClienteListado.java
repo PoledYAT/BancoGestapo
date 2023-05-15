@@ -10,7 +10,7 @@ import mx.itson.BancoGestapo.entidades.Cliente;
 import mx.itson.BancoGestapo.persistencia.ClienteDAO;
 
 /**
- *
+ * JFrame del muestreo de listado de Cliente
  * @author pyatq
  */
 public class ClienteListado extends javax.swing.JFrame {

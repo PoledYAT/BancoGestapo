@@ -12,7 +12,7 @@ import mx.itson.BancoGestapo.persistencia.CorteDAO;
 import mx.itson.BancoGestapo.persistencia.MovimientoDAO;
 
 /**
- *
+ * JFrame del muestreo de listado de Corte
  * @author pyatq
  */
 public class CorteListado extends javax.swing.JFrame {

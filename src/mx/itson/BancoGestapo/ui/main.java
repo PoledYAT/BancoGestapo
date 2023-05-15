@@ -12,7 +12,7 @@ import mx.itson.BancoGestapo.persistencia.EstablecimientoDAO;
 import mx.itson.BancoGestapo.persistencia.TarjetaDAO;
 
 /**
- *
+ * 
  * @author pyatq
  */
 public class main {

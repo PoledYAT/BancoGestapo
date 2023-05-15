@@ -10,7 +10,7 @@ import mx.itson.BancoGestapo.entidades.Establecimiento;
 import mx.itson.BancoGestapo.persistencia.EstablecimientoDAO;
 
 /**
- *
+ * JFrame del muestreo de listado de Establecimiento
  * @author pyatq
  */
 public class EstablecimientoListado extends javax.swing.JFrame {

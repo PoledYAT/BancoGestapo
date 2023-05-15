@@ -10,7 +10,7 @@ import mx.itson.BancoGestapo.entidades.Tarjeta;
 import mx.itson.BancoGestapo.persistencia.TarjetaDAO;
 
 /**
- *
+ * JFrame del muestreo de listado de Tarjeta
  * @author pyatq
  */
 public class TarjetaListado extends javax.swing.JFrame {
